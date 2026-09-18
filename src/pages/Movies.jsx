@@ -1,11 +1,20 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import getMovies from '../services/getMovies';
+import getAllMovies from '../services/getAllMovies';
 import Card from './../component/Card';
 
 export default function Movies() {
     const [query, setQuery] = useState("");
-    const [movieList, setMovieList] = useState([]);
+    const [movieList, setMovieList] = useState();
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        const fetchAllMovies = async () => {
+            const allMovies = await getAllMovies();
+            setMovieList(allMovies);
+        }
+        fetchAllMovies();
+    }, []);
 
     const handleSubmit = (async (q) => {
         q.preventDefault();
@@ -15,11 +24,9 @@ export default function Movies() {
             return;
         }
         setError("");
-        const movies = await getMovies(query);
+        const movies = await getMovies(query.trim());
         setMovieList(movies);
         console.log(movies);
-
-
     });
 
     return <div className="min-h-screen bg-gray-900 text-white">
@@ -32,7 +39,7 @@ export default function Movies() {
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4'>
         {
-            movieList.map((movie) => (<Card movie={movie}/>))
+            movieList && movieList.map((movie) => (<Card movie={movie}/>))
         }
         </div>
     </div>

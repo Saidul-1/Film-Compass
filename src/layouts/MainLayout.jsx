@@ -7,7 +7,7 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen flex-col">
         <nav className="bg-black px-5 py-2 flex justify-between">
-          <Link to="/" className="font-['Cinzel'] text-amber-400 text-2xl font-bold flex gap-2 items-center">
+          <Link to="/" className="font-['Cinzel'] text-amber-400 text-2xl font-bold flex gap-2 items-center text-nowrap">
             <FilmIcon/>
             {/* <VideoIcon/> */}
             {/* <ClapperboardIcon/> */}

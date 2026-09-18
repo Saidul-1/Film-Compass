@@ -31,9 +31,9 @@ export default function Movies() {
             return;
         }
         setError("");
-        setQueryValue(query.trim());
         const movies = await getMovies(query.trim());
         setMovieList(movies);
+        setQueryValue(query.trim());
         console.log(movies);
     });
 

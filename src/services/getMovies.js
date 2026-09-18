@@ -8,6 +8,7 @@ export default async function (query) {
         if(!res_json) throw new Error("Error fetching movie");
         console.log(res_json);
         return res_json.map(x => ({
+                id: x.show?.id,
                 name: x.show?.name,
                 image: x.show?.image?.medium,
                 rating: x.show?.rating.average,

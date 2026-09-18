@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router";
-import {FilmIcon, VideoIcon} from "lucide-react"
+import {ClapperboardIcon, FilmIcon, Tv, VideoIcon} from "lucide-react"
 import '@fontsource/cinzel/400.css';
 
 
@@ -7,11 +7,14 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen flex-col">
         <nav className="bg-black px-5 py-2 flex justify-between">
-          <div className="font-['Cinzel'] text-amber-400 text-2xl font-bold flex gap-2 items-center">
+          <Link to="/" className="font-['Cinzel'] text-amber-400 text-2xl font-bold flex gap-2 items-center">
             <FilmIcon/>
             {/* <VideoIcon/> */}
+            {/* <ClapperboardIcon/> */}
+            {/* <Tv/> */}
+            {/* 🎬 */}
             <p>Film Compass</p>
-            </div>
+            </Link>
             <div className="text-white font-semibold flex gap-4 items-center">
                <Link to='/'>Home</Link> 
                <Link to='/movies'>Movies</Link>

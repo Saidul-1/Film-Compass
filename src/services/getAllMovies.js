@@ -8,12 +8,13 @@ export default async function () {
         if(!res_json) throw new Error("Error fetching movie");
         console.log(res_json);
         return res_json.map(x => ({
+                id: x.id,
                 name: x.name,
                 image: x.image?.medium,
-                rating: x.rating.average,
+                rating: x.rating?.average,
                 premiered: x.premiered?.slice(0, 4),
                 language: x.language,
-                genres: x.genres.join(', '),
+                genres: x.genres?.join(', '),
                 summary: x.summary
         }));
     }

@@ -1,30 +1,80 @@
-Command to run this project:
-npm install
+# 🎬 FILM Compass
 
+**Film Compass** is a modern, responsive web application designed to help movie enthusiasts discover, search and explore movies effortlessly. Find your next favorite film by checking out ratings, genres, summaries and key release details in one place.
 
-Commands used for installation:
+🔗 **[Live Demo: https://film-compass-pro.vercel.app/](https://film-compass-pro.vercel.app/)**
+
+---
+
+## ✨ Features
+
+- 🔍 **Keyword Search**: Easily find movies by title or keyword.
+- ⭐ **Detailed Insights**: View ratings, release dates, genres, and rich plot summaries.
+- 🖼️ **Interactive Modals**: Detailed pop-up view to examine full movie information without leaving your view.
+- 📱 **Fully Responsive**: Optimized for seamless viewing across mobile, tablet, and desktop screens.
+- ⚡ **Fast Performance**: Built with modern web tooling for quick loading and fluid transitions.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** [React](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Routing:** [React Router](https://reactrouter.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Hosting:** [Vercel](https://vercel.com/)
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have **Node.js** (v18 or higher recommended) and **npm** installed on your system.
+
+### Installation & Local Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Saidul-1/Film-Compass.git
+   cd Film-Compass
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View in Browser**
+   Open your browser and navigate to `http://localhost:5173` (or the URL provided in your terminal).
+
+---
+
+## 📦 Project Setup Summary
+
+For reference, this project was bootstrapped using the following setup commands:
+
+```bash
+# Initialize Vite React project
 npm create vite@latest
 
-npm i react-router
+# Install dependencies
+npm install react-router lucide-react
 
-npm install lucide-react
-
+# Install Tailwind CSS v4 & Vite plugin
 npm install tailwindcss @tailwindcss/vite
+```
 
+---
 
-# React + Vite
+## 📄 License
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is open source and available under the [MIT License](LICENSE).
